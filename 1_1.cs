@@ -24,15 +24,15 @@ class Program
             if (a != 0)
             {
                 // Вычисление x1 и x2
-                double x1 = (y1 - b) / a;
-                double x2 = (y2 - b) / a;
+                double x1 = Math.Abs((y1 - b) / a);
+                double x2 = Math.Abs((y2 - b) / a);
 
                 // Вывод промежуточных результатов с форматированием
                 Console.WriteLine($"x1 равно {x1:F2}");
                 Console.WriteLine($"x2 равно {x2:F2}");
 
                 // Вычисление Xk
-                double Xk = (x1 + x2) / 2;
+                double Xk = Math.Abs((x1 + x2) / 2);
 
                 // Проверка, чтобы Xk не был отрицательным
                 if (Xk >= 0)
